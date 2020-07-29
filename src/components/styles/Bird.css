@@ -1,0 +1,23 @@
+.bird-holder {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    background-color: #303030;
+    padding: 15px;
+}
+.bird-image {
+    width: 200px;
+    height: 155px;
+    border-radius: 10px;
+}
+.bird-holder h3{
+    color: #fff;
+    margin-left: 5px;
+}
+.bird-holder hr {
+    border-color: #555555;
+}
+.bird-options {
+    width: 60%;
+    margin: 5px 35px 0 0;
+}

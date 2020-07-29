@@ -1,0 +1,48 @@
+.header-panel {
+    margin: 15px 0 10px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+.score-holder{
+    margin-top: 15px;
+}
+.logo, .score-holder {
+    color: #fff;
+}
+.header {
+    margin-top: 10px;
+    flex-direction: column;
+}
+.pagination {
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    text-align : center;
+    border-radius: 45px;
+}
+.header .pagination  {
+    overflow: hidden;
+    padding: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.page-item .page-link {
+    background-color: #91140d;
+    border: 0 solid transparent;
+    height: 34px;
+}
+.page-link {
+    color: #fff !important;
+}
+.page-item {
+    flex: auto;
+}
+.page-item.active .page-link{
+    background-color: #b31a12 !important;
+}
+.header ul li a {
+    border-radius: 0 !important;
+}
+.page-item:hover .page-link {
+    background-color: #b31a12;
+}

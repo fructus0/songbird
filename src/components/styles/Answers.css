@@ -1,0 +1,18 @@
+.answer-list .list-group-item {
+    background-color: #303030;
+    color: #fff;
+}
+.answer-list .li-sens {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #222222;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+.win .li-sens {
+    background-color: darkseagreen;
+}
+.lose .li-sens {
+    background-color: #b31a12;
+}
