@@ -27,7 +27,7 @@
     flex-wrap: wrap;
 }
 .page-item .page-link {
-    background-color: #91140d;
+    background-color: #007c5d;
     border: 0 solid transparent;
     height: 34px;
 }
@@ -38,11 +38,15 @@
     flex: auto;
 }
 .page-item.active .page-link{
-    background-color: #b31a12 !important;
+    background-color: #00bc8c !important;
 }
 .header ul li a {
     border-radius: 0 !important;
 }
 .page-item:hover .page-link {
-    background-color: #b31a12;
+    cursor: auto;
+    background-color: #007c5d;
+}
+.page-item:active, .page-item:focus {
+    box-shadow: none;
 }

@@ -1,0 +1,11 @@
+.btn {
+    width: 100%;
+    color: #fff;
+    background-color: #303030;
+    border: #555555 solid 1px;
+    margin: 25px 15px;
+}
+.btn:hover, .btn:focus, btn:active {
+    color: #fff;
+    box-shadow: none;
+}

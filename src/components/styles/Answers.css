@@ -1,18 +1,34 @@
 .answer-list .list-group-item {
     background-color: #303030;
     color: #fff;
+    border: 1px solid #555;
+}
+.answer-list {
+    height: 100%;
 }
 .answer-list .li-sens {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #222222;
+    background-color: #555555;
     border-radius: 30px;
     margin-right: 15px;
 }
 .win .li-sens {
-    background-color: darkseagreen;
+    background-color: #00bc8c;
 }
 .lose .li-sens {
     background-color: #b31a12;
+}
+.list-group-item {
+    padding: 13px 20px !important;
+    cursor: pointer;
+}
+.list-group-item:hover {
+    background-color: #555555;
+}
+@media (max-width: 768px) {
+    .answers {
+        margin-top: -5px !important;
+    }
 }

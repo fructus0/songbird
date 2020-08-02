@@ -4,7 +4,7 @@ import "./styles/Answers.css";
 class Answers extends Component {
     render() {
         return (
-            <div className="col-md-6">
+            <div className="col-md-6 answers">
                 <ul className="answer-list list-group">
                     <li className="list-group-item win">
                         <span className="li-sens"></span>

@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "./styles/Bird.css";
 import birdImage from "../media/default-bird.jpg";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 class Bird extends Component {
     render() {
         return (
@@ -9,11 +11,7 @@ class Bird extends Component {
                 <div className="bird-options">
                     <h3 className="bird-name">******</h3>
                     <hr></hr>
-                    <div className="audio-player">
-                       <div className="player-controls">
-                           <div className="play-button"></div>
-                       </div>
-                    </div>
+                    <AudioPlayer className="audio-player" showJumpControls={false}/>
                 </div>
             </div>
         )
