@@ -4,8 +4,10 @@ import Header from "./components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bird from "./components/Bird";
 import Main from "./components/Main";
+
+
 class App extends Component {
-  render() {
+    render() {
     return(
         <>
             <Header></Header>
@@ -15,5 +17,4 @@ class App extends Component {
     )
   }
 }
-
 export default App;

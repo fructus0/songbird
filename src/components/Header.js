@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import "./styles/Header.css";
-
-class Header extends Component {
-    render() {
+import {connect} from "react-redux";
+const Header = ({questions, currentQuestion}) => {
         return (
             <header className="header d-flex">
                 <div className="header-panel d-flex flex-row">
@@ -12,15 +11,22 @@ class Header extends Component {
                     </h4>
                 </div>
                 <ul className="pagination">
-                    <li className="page-item active"><a className="page-link" href="/#">Разминка</a></li>
-                    <li className="page-item"><a className="page-link" href="/#">Воробьиные</a></li>
-                    <li className="page-item"><a className="page-link" href="/#">Лесные птицы</a></li>
-                    <li className="page-item"><a className="page-link" href="/#">Певчие птицы</a></li>
-                    <li className="page-item"><a className="page-link" href="/#">Хищные птицы</a></li>
-                    <li className="page-item"><a className="page-link" href="/#">Морские птицы</a></li>
+                    {
+                        questions.map((item, key) => {
+                            return (
+                                <li className={key === currentQuestion? "page-item active" : "page-item"} key={key}><a className="page-link" href="/#">{item}</a></li>
+                            )
+                        })
+                    }
+
                 </ul>
             </header>
         )
+}
+const mapStateToProps = (state) => {
+    return {
+        questions: state.questions,
+        currentQuestion: state.currentQuestion
     }
 }
-export default Header
+export default connect(mapStateToProps) (Header);

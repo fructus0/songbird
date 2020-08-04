@@ -1,38 +1,33 @@
-import React, {Component} from "react";
+import React from "react";
 import "./styles/Answers.css";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as actions from "../actions.js";
+import AnswerItem from "./AnswerItem";
 
-class Answers extends Component {
-    render() {
+const Answers = ({answers}) => {
         return (
             <div className="col-md-6 answers">
                 <ul className="answer-list list-group">
-                    <li className="list-group-item win">
-                        <span className="li-sens"></span>
-                        Ворон
-                    </li>
-                    <li className="list-group-item lose">
-                        <span className="li-sens"></span>
-                        Журавль
-                    </li>
-                    <li className="list-group-item">
-                        <span className="li-sens"></span>
-                        Ласточка
-                    </li>
-                    <li className="list-group-item">
-                        <span className="li-sens"></span>
-                        Козодой
-                    </li>
-                    <li className="list-group-item">
-                        <span className="li-sens"></span>
-                        Кукушка
-                    </li>
-                    <li className="list-group-item">
-                        <span className="li-sens"></span>
-                        Синица
-                    </li>
+                    {answers.map((item, key) => {
+                        return (
+                            <AnswerItem item={item}
+                                        key={key}/>
+                        )
+                    })}
                 </ul>
             </div>
         )
+}
+const mapStateToProps = (state) => {
+    return {
+        answers:state.answers,
+        clicked : state.clicked,
     }
 }
-export default Answers;
+const mapDespatchToProps = (dispatch) => {
+    const {answerOnClick} = bindActionCreators(actions, dispatch);
+    return {answerOnClick: (element) => answerOnClick(element)};
+}
+
+export default connect(mapStateToProps, mapDespatchToProps) (Answers);

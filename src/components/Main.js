@@ -1,16 +1,27 @@
-import React, {Component} from "react";
+import React from "react";
 import Answers from "./Answers";
 import Details from "./Details";
 import "./styles/Main.css";
-class Main extends Component {
-    render() {
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as actions from "../actions";
+
+const Main = ({isCorrect, nextLevel}) => {
         return (
             <div className="row mb2">
                 <Answers></Answers>
                 <Details></Details>
-                <button className="btn">Next Level</button>
+                <button className={isCorrect? "btn active" : "btn"} onClick={isCorrect? nextLevel : () => {}}>Next Level</button>
             </div>
         )
+}
+const mapStateToProps = (state) => {
+    return {
+        isCorrect: state.isCorrect
     }
 }
-export default Main;
+const mapDespatchToProps = (dispatch) => {
+    const {nextLevel} = bindActionCreators(actions, dispatch);
+    return {nextLevel};
+}
+export default connect(mapStateToProps, mapDespatchToProps) (Main);

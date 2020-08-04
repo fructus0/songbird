@@ -9,3 +9,6 @@
     color: #fff;
     box-shadow: none;
 }
+.active {
+    background-color: #00bc8c;
+}
